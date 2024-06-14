@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/nosotros";
+@import "partials/servicios";
+@import "partials/formulario";
+@import "partials/foot";
+
+.portada {
+    background-image: url("../media/fondo.png");
+    
+    $breakpoint-sm: 576px;
+    $breakpoint-md: 768px;
+    $breakpoint-lg: 992px;
+    $breakpoint-xl: 1200px;
+
+    @media (max-width: $breakpoint-sm) {
+        .sec1, .sec2, .sec3 {
+            .row {
+                h1 {
+                    font-size: 24px;
+                    padding: 15px;
+                }
+                p {
+                    font-size: 16px;
+                    padding: 10px;
+                }
+                h2 {
+                    font-size: 20px;
+                    padding: 15px;
+                }
+                h3 {
+                    font-size: 16px;
+                    padding: 15px;
+                }
+                img {
+                    max-height: 300px;
+                }
+            }
+        }
+    }
+
+    .espaciador{
+        .banner{
+            @include flex;
+            justify-content: center;
+            img{
+                max-width: 90%;
+                height: auto;
+            }
+        }
+    }
+    .sec1 {
+        @include flex;
+        .row {
+            background-image: linear-gradient(to bottom, white, $color-fondo-portada);
+            text-align: left;
+            padding-top: 45px;
+            h1{
+                font-family: $tipografia;
+                font-weight: bold;
+                font-size: 30px;
+                color: rgb(45, 45, 192);
+                padding: 20px;
+            }
+            p{
+                font-family: $tipografia;
+                font-size: 18px;
+                padding: 15px;
+            }
+            img {
+                max-width: 100%;
+                max-height: 450px;
+                display: block; 
+                margin: 30px auto;
+            }
+        }
+    }
+    .sec2 {
+        @include flex;
+        .row {
+            background-image: linear-gradient(to top, $color-fondo-portada, white, $color-fondo-portada);
+            text-align: right;
+            padding-top: 50px;
+            padding-bottom: 80px;
+            h2{
+                font-family: $tipografia;
+                font-size: 25px;
+                color: rgb(45, 45, 192);
+                font-weight: bold;
+                padding: 20px;
+            }
+            p{
+                font-family: $tipografia;
+                font-size: 18px;
+                padding: 20px;
+            }
+            img {
+                max-width: 100%;
+                max-height: 350px;
+                display: block; 
+                margin: 30px auto;
+                border-radius: 45%;
+            }
+        }
+    }
+    .sec3 {
+        @include flex;
+        .row {
+            background-image: linear-gradient(to top, $color-fondo-portada, white, $color-fondo-portada);
+            text-align: left;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            h2{
+                font-family: $tipografia;
+                font-size: 25px;
+                color: rgb(45, 45, 192);
+                font-weight: bold;
+                padding: 20px;
+            }
+            h3{
+                font-family: $tipografia;
+                font-size: 18px;
+                color: rgb(45, 45, 192);
+                text-decoration: underline;
+                font-weight: bold;
+                padding: 20px;
+            }
+            p{
+                font-family: $tipografia;
+                font-size: 18px;
+                padding-left: 10px;
+            }
+            img {
+                max-width: 100%;
+                max-height: 350px;
+                display: block; 
+                margin: 30px auto; 
+                border-radius: 10px;
+            }
+        }
+    }
+}
